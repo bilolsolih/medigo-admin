@@ -7,6 +7,7 @@ import Bemorlar from "./pages/Bemorlar";
 import Adminstrator from "./pages/Adminstrator";
 import ProfileEdit from "./pages/ProfileEdit";
 import DashboardLayout from "./layouts/DashboardLayout";
+import LogoutModal from "./components/LogoutModal";
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -20,6 +21,8 @@ function PublicRoute({ children }) {
 
 export default function App() {
   return (
+    <>
+    <LogoutModal/>
     <Routes>
       
       <Route
@@ -40,7 +43,6 @@ export default function App() {
         }
       />
 
-      {/* Layout bilan himoyalangan bo‘lim */}
       <Route element={<PrivateRoute><DashboardLayout /></PrivateRoute>}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/shifokorlar" element={<Shifokorlar />} />
@@ -51,5 +53,6 @@ export default function App() {
       </Route>
 
     </Routes>
+    </>
   );
 }

@@ -4,7 +4,6 @@ import DashboardIcon from "../assets/Images/DashboardIcon.svg"
 import ShifokorlarIcon from "../assets/Images/ShifokorlarIcon.svg"
 import BemorlarIcon from "../assets/Images/BemorlarIcon.svg"
 import ChiqishIcon from "../assets/Images/ChiqishIcon.svg"
-import { LogOut } from "lucide-react";
 
 export default function Sidebar() {
 const menu = [
@@ -18,6 +17,7 @@ const menu = [
   function openLogoutModal() {
     const event = new CustomEvent("openLogout");
     window.dispatchEvent(event);
+    console.log("button bosildi")
   }
 
   return (
@@ -47,7 +47,7 @@ const menu = [
 
         <button
           onClick={openLogoutModal}
-          className="flex items-center mt-7 gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          className="flex items-center cursor-pointer mt-7 gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
         >
           <img src={ChiqishIcon} width={20} />
           Chiqish
