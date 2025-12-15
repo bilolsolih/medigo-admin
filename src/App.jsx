@@ -8,6 +8,8 @@ import Adminstrator from "./pages/Adminstrator";
 import ProfileEdit from "./pages/ProfileEdit";
 import DashboardLayout from "./layouts/DashboardLayout";
 import LogoutModal from "./components/LogoutModal";
+import DoctorDetail from "./components/DoctorDetail";
+import DoctorAppointments from "./components/DoctorAppointments";
 
 function PrivateRoute({ children }) {
   const token = localStorage.getItem("token");
@@ -50,6 +52,9 @@ export default function App() {
         <Route path="/bemorlar" element={<Bemorlar />} />
         <Route path="/administrator" element={<Adminstrator />} />
         <Route path="/profile" element={<ProfileEdit />} />
+
+        <Route path="/shifokorlar/:id" element={<DoctorDetail />} />
+        <Route path="/shifokorlar/:id/qabullar" element={<DoctorAppointments/>} />
       </Route>
 
     </Routes>

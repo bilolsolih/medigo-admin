@@ -18,7 +18,7 @@ export default function LogoutModal() {
   }
 
   return (
-    <div className="fixed inset-0 backdrop-blur-xs backdrop-brightness-75 bg-opacity-30 flex items-center justify-center">
+    <div className="fixed inset-0 backdrop-blur-xs backdrop-brightness-75 bg-opacity-30 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-xl w-[380px]">
         <h2 className="text-lg font-semibold mb-3">Chiqishni tasdiqlang</h2>
         <p className="text-gray-600 mb-6">
